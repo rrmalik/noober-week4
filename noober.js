@@ -10,13 +10,13 @@ async function pageLoaded() {
     let leg = ride[l]
     
   // declare variables:
-      let passengerNumberOfPassengers = leg.numberOfPassengers
-      let passengerName = `${leg.passengerDetails.first} ${leg.passengerDetails.last}`
-      let passengerPhone = leg.passengerDetails.phoneNumber
-      let passengerPickupAddressLine1 = leg.pickupLocation.address
-      let passengerPickupAddressLine2 = `${leg.pickupLocation.city}, ${leg.pickupLocation.state} ${leg.pickupLocation.zip}`
-      let passengerDropoffAddressLine1 = leg.dropoffLocation.address
-      let passengerDropoffAddressLine2 = `${leg.dropoffLocation.city}, ${leg.dropoffLocation.state} ${leg.dropoffLocation.zip}`
+      let numberOfPassengers = leg.numberOfPassengers
+      let FullName = `${leg.passengerDetails.first} ${leg.passengerDetails.last}`
+      let phoneNumber = leg.passengerDetails.phoneNumber
+      let pickupAddressLine1 = leg.pickupLocation.address
+      let pickupAddressLine2 = `${leg.pickupLocation.city}, ${leg.pickupLocation.state} ${leg.pickupLocation.zip}`
+      let dropoffAddressLine1 = leg.dropoffLocation.address
+      let dropoffAddaressLine2 = `${leg.dropoffLocation.city}, ${leg.dropoffLocation.state} ${leg.dropoffLocation.zip}`
 
   // determine rides and add html snippets 
       let levelOfService
@@ -34,34 +34,34 @@ async function pageLoaded() {
             <div class="border-4 border-gray-900 p-4 my-4 text-left">
               <div class="flex">
                 <div class="w-1/2">
-                  <h2 class="text-2xl py-1">${passengerName}</h2>
-                  <p class="font-bold text-gray-600">${passengerPhone}</p>
+                  <h2 class="text-2xl py-1">${FullName}</h2>
+                  <p class="font-bold text-gray-600">${phoneNumber}</p>
                 </div>
                 <div class="w-1/2 text-right">
                   <span class="rounded-xl bg-gray-600 text-white p-2">
-                  ${passengerNumberOfPassengers} passengers
+                  ${numberOfPassengers} passengers
                   </span>
                 </div>
               </div>
               <div class="mt-4 flex">
                 <div class="w-1/2">
                   <div class="text-sm font-bold text-gray-600">PICKUP</div>
-                  <p>${passengerPickupAddressLine1}</p>
-                  <p>${passengerPickupAddressLine2}</p>
+                  <p>${pickupAddressLine1}</p>
+                  <p>${pickupAddressLine2}</p>
                 </div>
                 <div class="w-1/2">
                   <div class="text-sm font-bold text-gray-600">DROPOFF</div>
-                  <p>${passengerDropoffAddressLine1}</p>
-                  <p>${passengerDropoffAddressLine2}</p>
+                  <p>${dropoffAddressLine1}</p>
+                  <p>${dropoffAddaressLine2}</p>
                 </div>
               </div>
             </div>
           `
         )
 
-      } else if (leg.purpleRequested == true) {                // if purpleRequest = true, then level of service = Noober Purple = always 1
+      } else if (leg.purpleRequested == true) {
         levelOfService = "Noober Purple"
-        let outputElement = document.querySelector(".rides")   // PRINTING - Noober Purple
+        let outputElement = document.querySelector(".rides")
         outputElement.insertAdjacentHTML("beforeend",
           `
             <h1
@@ -73,25 +73,25 @@ async function pageLoaded() {
             <div class="border-4 border-purple-500 p-4 my-4 text-left">
               <div class="flex">
                 <div class="w-1/2">
-                  <h2 class="text-2xl py-1">${passengerName}</h2>
-                  <p class="font-bold text-gray-600">${passengerPhone}</p>
+                  <h2 class="text-2xl py-1">${FullName}</h2>
+                  <p class="font-bold text-gray-600">${phoneNumber}</p>
                 </div>
                 <div class="w-1/2 text-right">
                   <span class="rounded-xl bg-purple-600 text-white p-2">
-                    ${passengerNumberOfPassengers} passengers
+                    ${numberOfPassengers} passengers
                   </span>
                 </div>
               </div>
               <div class="mt-4 flex">
                 <div class="w-1/2">
                   <div class="text-sm font-bold text-gray-600">PICKUP</div>
-                  <p>${passengerPickupAddressLine1}</p>
-                  <p>${passengerPickupAddressLine2}</p>
+                  <p>${pickupAddressLine1}</p>
+                  <p>${pickupAddressLine2}</p>
                 </div>
                 <div class="w-1/2">
                   <div class="text-sm font-bold text-gray-600">DROPOFF</div>
-                  <p>${passengerDropoffAddressLine2}</p>
-                  <p>${passengerDropoffAddressLine2}</p>
+                  <p>${dropoffAddaressLine2}</p>
+                  <p>${dropoffAddaressLine2}</p>
                 </div>
               </div>
             </div>
@@ -112,25 +112,25 @@ async function pageLoaded() {
             <div class="border-4 border-gray-900 p-4 my-4 text-left">
               <div class="flex">
                 <div class="w-1/2">
-                  <h2 class="text-2xl py-1">${passengerName}</h2>
-                  <p class="font-bold text-gray-600">${passengerPhone}</p>
+                  <h2 class="text-2xl py-1">${FullName}</h2>
+                  <p class="font-bold text-gray-600">${phoneNumber}</p>
                 </div>
                 <div class="w-1/2 text-right">
                   <span class="rounded-xl bg-gray-600 text-white p-2">
-                  ${passengerNumberOfPassengers} passengers
+                  ${numberOfPassengers} passengers
                   </span>
                 </div>
               </div>
               <div class="mt-4 flex">
                 <div class="w-1/2">
                   <div class="text-sm font-bold text-gray-600">PICKUP</div>
-                  <p>${passengerPickupAddressLine1}</p>
-                  <p>${passengerPickupAddressLine2}</p>
+                  <p>${pickupAddressLine1}</p>
+                  <p>${pickupAddressLine2}</p>
                 </div>
                 <div class="w-1/2">
                   <div class="text-sm font-bold text-gray-600">DROPOFF</div>
-                  <p>${passengerDropoffAddressLine1}</p>
-                  <p>${passengerDropoffAddressLine2}</p>
+                  <p>${dropoffAddressLine1}</p>
+                  <p>${dropoffAddaressLine2}</p>
                 </div>
               </div>
             </div>
@@ -151,25 +151,25 @@ async function pageLoaded() {
             <div class="border-4 border-gray-900 p-4 my-4 text-left">
               <div class="flex">
                 <div class="w-1/2">
-                  <h2 class="text-2xl py-1">${passengerName}</h2>
-                  <p class="font-bold text-gray-600">${passengerPhone}</p>
+                  <h2 class="text-2xl py-1">${FullName}</h2>
+                  <p class="font-bold text-gray-600">${phoneNumber}</p>
                 </div>
                 <div class="w-1/2 text-right">
                   <span class="rounded-xl bg-gray-600 text-white p-2">
-                  ${passengerNumberOfPassengers} passengers
+                  ${numberOfPassengers} passengers
                   </span>
                 </div>
               </div>
               <div class="mt-4 flex">
                 <div class="w-1/2">
                   <div class="text-sm font-bold text-gray-600">PICKUP</div>
-                  <p>${passengerPickupAddressLine1}</p>
-                  <p>${passengerPickupAddressLine2}</p>
+                  <p>${pickupAddressLine1}</p>
+                  <p>${pickupAddressLine2}</p>
                 </div>
                 <div class="w-1/2">
                   <div class="text-sm font-bold text-gray-600">DROPOFF</div>
-                  <p>${passengerDropoffAddressLine1}</p>
-                  <p>${passengerDropoffAddressLine2}</p>
+                  <p>${dropoffAddressLine1}</p>
+                  <p>${dropoffAddaressLine2}</p>
                 </div>
               </div>
             </div>

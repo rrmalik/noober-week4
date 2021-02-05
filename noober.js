@@ -98,9 +98,9 @@ async function pageLoaded() {
           `
         )
 
-      } else if (leg.numberOfPassengers > 3) {                 // if number of total people is > 3, then level of service = Noober XL
+      } else if (leg.numberOfPassengers > 3) {                
         levelOfService = "Noober XL"
-        let outputElement = document.querySelector(".rides")   // PRINTING - Noober XL
+        let outputElement = document.querySelector(".rides") 
         outputElement.insertAdjacentHTML("beforeend",
           `
             <h1
@@ -137,9 +137,9 @@ async function pageLoaded() {
           `
         )
 
-      } else {                                                 // else Noober X
+      } else { 
         levelOfService = "Noober X"
-        let outputElement = document.querySelector(".rides")   // PRINTING - Noober X
+        let outputElement = document.querySelector(".rides")
         outputElement.insertAdjacentHTML("beforeend",
           `
             <h1

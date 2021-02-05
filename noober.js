@@ -1,3 +1,5 @@
+//IGNORE HW! SUBMITTED LATE AND BUILT OFF OF FRIEND'S HW (RECOVERING FROM COVID)
+
 async function pageLoaded() {
   let response = await fetch('https://kiei451.com/api/rides.json')
   let json = await response.json()
@@ -5,6 +7,7 @@ async function pageLoaded() {
   //grab JSON array
   for (let i = 0; i < json.length; i++) {   
     let ride = json[i]
+    
   //one level deeper
   for (let l = 0; l < ride.length; l++) {  
     let leg = ride[l]
